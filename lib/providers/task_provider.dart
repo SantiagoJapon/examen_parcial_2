@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:examen_parcial_2/models/task.dart';
 import 'package:flutter/foundation.dart';
+import 'package:examen_parcial_2/providers/task_provider.dart';
+
 
 class TaskProvider with ChangeNotifier {
   List<Task> _tasks = [];

@@ -9,6 +9,8 @@ import 'package:examen_parcial_2/providers/task_provider.dart';
 
 
 class TaskScreen extends StatelessWidget {
+  const TaskScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Envuelve la parte de tu UI que depende del TaskProvider con un Consumer<TaskProvider>
@@ -39,15 +41,12 @@ class TaskScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).pop();
           showDialog(context: context, builder: (BuildContext context){
             return AlertDialog(
               content: ScreenTask(),
             );
-          },
-          );
-          // Aquí podrías implementar un diálogo o una pantalla para añadir nuevas tareas.
-          // Esto es un ejemplo simplificado. En una aplicación real, considera usar un formulario.
+          });
+          // Elimina Navigator.of(context).pop();
         },
         child: Icon(Icons.add),
       ),
